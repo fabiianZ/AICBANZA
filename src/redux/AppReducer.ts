@@ -2,7 +2,11 @@ import { createReducer } from "@reduxjs/toolkit"
 import { fetchArtworkList } from "./AppSideEffects";
 import { clean } from "./AppActions";
 
-const initialState = {
+interface AppState {
+    artworkList: any[];
+
+}
+const initialState:AppState = {
     artworkList : []
 }
 

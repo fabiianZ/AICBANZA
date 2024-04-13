@@ -2,7 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 
 const fetchArtworkList = createAsyncThunk(
     "fetchArtworkList",
-    async (page, {rejectWithValue},otherNullData) => {
+    async (page, {rejectWithValue}) => {
         try {
             const response = await fetch(`https://api.artic.edu/api/v1/artworks?page=${page}`);
             const responseData = await response.json();
